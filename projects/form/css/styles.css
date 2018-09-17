@@ -1,0 +1,440 @@
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;    
+    box-sizing: border-box;
+}
+
+body {
+    background: #242424 url("../img/background.jpg") no-repeat center top;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;    
+    color: #202020;
+    position: relative;
+    height: 100vh;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    animation-name: expand;    
+    animation-duration: 0.5s;
+}
+
+@keyframes expand {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: none;
+    }
+}
+
+p {
+    margin-bottom: 3em;
+    padding: 0 12px;
+    line-height: 1.6;
+}
+
+header {
+    display: block;
+    height: 60px;
+    margin-bottom: 17px;
+    margin-left: 172px;
+}
+
+h1 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 48px;
+}
+
+h2 {
+    margin-bottom: 1em;
+    font-weight: 500;
+}
+
+.container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    width: 100%;
+    padding: 20px;
+    min-height: 0; /* keeps layout from going above the viewport in firefox */
+}
+
+.side-img {
+    background: #222 url("../img/side-img.jpg") no-repeat center center;
+    height: 552px;
+    -ms-flex-preferred-size: 308px;
+        flex-basis: 308px;
+    -ms-flex-negative: 10;
+        flex-shrink: 10;
+}
+
+.content {
+    position: relative;
+    background: linear-gradient(#f9f9fb, #efeff2);
+    height: 552px;
+    -ms-flex-preferred-size: 470px;
+        flex-basis: 470px;
+    padding: 45px 50px;
+}
+
+.content:before {
+    background: #1bfec0;
+    content: "";
+    display: block;
+    height: 2px;
+    width: 70px;
+    position: absolute;
+    top: -2px;
+    left: 50px;    
+}
+
+section {
+    display: none;
+    overflow: hidden;
+}
+
+section.active {
+    display: block;
+}
+
+h2, p, fieldset {
+    animation-name: slideIn;
+    animation-duration: 750ms;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: none;
+    }
+}
+
+/* ------ navigation tabs ------ */
+
+nav {
+    display: block;
+    margin-top: 107px;
+    -ms-flex-preferred-size: 70px;
+        flex-basis: 70px;
+}
+
+nav a {
+    display: block;
+    padding-left: 12px;
+    height: 87px;
+    color: #555;
+    font-size: 11px;
+    text-decoration: none;
+    line-height: 17px;
+    transition: all 0.5s;
+}
+
+nav a:before {
+    background: #555;
+    content: "";
+    display: block;
+    height: 2px;
+    width: 25px;
+    margin-left: -12px;
+    margin-bottom: 12px;
+    transition: all 0.5s;
+}
+
+nav a.active {
+    color: #fff;
+}
+
+nav a:hover:before {
+    background: #54a48e;
+}
+
+nav a.active:before {
+    background: #1bfec0;
+}
+
+/* ------ form ------ */
+
+fieldset {
+    border: none;
+    margin-bottom: 22px;
+}
+
+legend {
+    display: block;
+    color: #a2a2af;
+    font-size: 11px;
+    margin-left: 15px;  
+}
+
+input, select {
+    border: none;
+    outline: none; /* ie adds ugly red outline to required fields when invalid */
+    box-shadow: none; /* firefox adds ugly red shadow to required fields when invalid */
+    border-bottom: 2px solid #dfdfe4;
+    background: none;
+    color: #202020;
+    font-size: 16px;
+    padding: 9px 17px 17px;
+    transition: border-bottom 0.5s;
+}
+
+input:focus, select:focus, input:active, select:active {
+    border-bottom: 2px solid #531fc0;
+}
+
+select, option {
+    -webkit-appearance : none; /* To gain control over the appearance on WebKit */
+    -moz-appearance : none; /* To gain control over the appearance on Gecko */
+    appearance: none;
+    background : none; /* To gain control over the appearance on Presto (Opera) and Trident (IE). Note that it also work on Gecko and has partial effects on WebKit */
+}
+
+/* ------ name ------ */
+
+input[name="name"] {
+    width: 100%;    
+}
+
+/* ------ mobile ------ */
+
+.mobile {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+}
+
+select[name="country-code"] {
+    min-width: 114px;
+    background-repeat: no-repeat;
+    background-size: 7px;
+    background-position: 93px 16px;
+    background-image: url("data:image/svg+xml;charset=utf-8, \
+        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 40'> \
+          <polygon points='0,0 60,0 30,40' style='fill:LightGrey;'/> \
+        </svg>");
+}
+
+input[type="tel"] {
+    margin-left: 15px;
+    width: 100%;
+    overflow: hidden; /* prevent overflowing in firefox */
+}
+
+/* ------ gender ------ */
+
+label.gender {
+    display: inline-block;
+    margin: 14px 28px 2px 0;
+}
+
+.gender span {
+    width: 49px;
+    height: 49px;
+    display: block;
+    line-height: 56px;
+    padding-left: 10px;
+    border: 2px solid #dfdfe4;
+    font-size: 20px;
+    color: #000;
+    position: relative;
+    cursor: pointer;
+    transition: border 0.5s;
+}
+
+input[type="radio"] {
+    border: 0; 
+    clip: rect(0 0 0 0);
+    height: 1px; margin: -1px; 
+    overflow: hidden; 
+    padding: 0; 
+    position: absolute; 
+    width: 1px;
+}
+
+input[type="radio"] + span::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 17px;
+    right: -8px;
+    width: 13px;
+    height: 14px;
+    text-align: center;
+    line-height: 10px;
+    background: #f2f2f5;
+    border: 2px solid #dfdfe4;
+    color: #1cd4a3;
+    font-size: 15px;
+    transition: border 0.5s;
+}
+
+input[type="radio"]:checked + span {
+    border: 2px solid #1cd4a3;
+}
+
+input[type="radio"]:checked + span::after {
+    content: '▪';
+    border: 2px solid #1cd4a3;
+    background: #f8f8f9;
+}
+
+/* ------ date ------ */
+
+.date {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+    margin-top: 13px;
+}
+
+.select-date {
+    border: 2px solid #dfdfe4;
+    padding: 14px;
+    transition: border 0.5s;
+}
+
+.select-date:focus {
+    border: 2px solid #531fc0;
+}
+
+.dash {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+        align-self: center;
+    color: #dfdfe4;
+    margin: 0px 8px;
+}
+
+select[name="day"], select[name="month-name"], select[name="month-number"] {
+    -ms-flex-negative: 0;
+        flex-shrink: 0; /* prevent shrinking in firefox */
+}
+
+select[name="month-name"] {
+    min-width: 135px;
+}
+
+input[name="year"] {
+    width: 100%;
+}
+
+/* ------ submit button ------ */
+
+button {
+    background: #6e36e8;
+    font-size: 12px;
+    color: #fff;
+    height: 50px;
+    width: 237px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    line-height: 4;
+    position: absolute;
+    bottom: -25px;
+    right: -50px;
+    box-shadow: 0px 17px 30px 0px rgba(33, 32, 55, 0.2);
+    transition: all 0.2s;
+    animation-name: buttonGrow;
+    animation-duration: 750ms;    
+}
+
+button:hover {
+    background: #8C60E6;
+}
+
+button span {
+    width: 50px;
+    background: #7841f4;
+    height: 50px;
+    display: inline-block;
+    float: right;
+    line-height: 2.5;
+    font-size: 19px;
+    box-shadow: -3px 5px 5px 0px rgba(13, 13, 31, 0.05);
+    transition: background 0.2s, padding-left 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
+button:hover span {
+    background: #956bff;
+}
+
+button:active span {
+    padding-left: 20px;
+}
+
+@keyframes buttonGrow {
+    from {
+        transform: scaleX(0);
+        transform-origin: -200px;
+    }
+    to {
+        transform: none;
+    }
+}
+
+/* ------ media queries ------ */
+
+@media (max-width: 800px) {
+    header {
+        margin-left: 100px;
+    }
+}
+
+@media (max-width: 700px) {
+    header {
+        height: 45px;
+        margin-bottom: 0px;
+        margin-left: -130px;
+    }
+    h1 {
+        font-size: 36px;
+    }
+    .side-img  {
+        display: none;
+    }
+    .content {
+        height: 512px;
+        padding: 30px 15px;
+    }
+    p {
+        margin-bottom: 1em;
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        margin-left: 0;
+    }    
+    .content:before {
+        left: 14px;
+    }    
+    nav {
+        display: none;
+    }
+    button {
+        left: 15%;
+    }
+    select[name="month-name"] {
+        display: none;
+    }
+}
+
+@media (min-width: 500px) {
+    select[name="month-number"] {
+        display: none;
+    }
+}    

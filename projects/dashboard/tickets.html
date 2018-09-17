@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard based on Inspinia</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="tickets">
+
+<div id="wrapper">
+
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element">
+                            <span>
+                                <img alt="image" class="img-circle" src="img/logo.png">
+                            </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Name of User</strong>
+                             </span> <span class="text-muted text-xs block">Menu <b class="caret"></b></span> </span> </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="#">Logout</a></li>
+                            </ul>
+                    </div>
+                    <div class="logo-element">
+                        <img alt="image" class="img-circle" src="img/logo.png">
+                    </div>
+                </li>
+                <li>
+                    <a href="index.html" data-tooltip="Dashboard"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
+                </li>
+                <li class="active">
+                    <a href="tickets.html" data-tooltip="Tickets"><i class="fa fa-ticket"></i> <span class="nav-label">Tickets</span></a>
+                </li>
+                <li>
+                    <a href="#" data-tooltip="Audit"><i class="fa fa-calendar-check-o"></i> <span class="nav-label">Audit</span></a>
+                </li>
+                <li>
+                    <a href="#" data-tooltip="Broadcast"><i class="fa fa-bullhorn"></i> <span class="nav-label">Broadcast</span></a>
+                </li>
+                <li>
+                    <a href="#" data-tooltip="Users"><i class="fa fa-users"></i> <span class="nav-label">Users</span></a>
+                </li>                
+                <li>
+                    <a href="#" data-tooltip="Change Logs"><i class="fa fa-pencil"></i> <span class="nav-label">Change Logs</span></a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-cogs"></i> <span class="nav-label">Settings</span><span class="fa arrow pull-right"></span>
+                    </a>        
+                    <ul class="nav nav-second-level collapse">
+                        <li><a href="#">Custom fields</a></li>
+                        <li><a href="#">Dashboard widgets</a></li>
+                        <li><a href="#">Roles</a></li>
+                        <li><a href="#">Tags</a></li>
+                        <li><a href="#">Ticket routing</a></li>
+                    </ul>
+                </li>
+
+
+            </ul>
+
+        </div>
+    </nav>
+
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                    <!-- <form role="search" class="navbar-form-custom" method="post" action="#">
+                        <div class="form-group">
+                            <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+                        </div>
+                    </form> -->
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li>Hello, John Doe</li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-user"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-power-off"></i>
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <div class="ibox">
+                      <div class="ibox-title">
+                        <h5>Tickets</h5>
+                      </div>
+                      <div class="ibox-content">
+                        <div class="row m-b-md">
+                          <div class="col-xs-12">
+                            <div class="tabs-container" id="ticket-search-tabs">
+                              <span class="badge badge-info pull-right">60 results</span>
+                              <ul class="nav nav-tabs">
+                                <li class="active"><a data-toggle="tab" href="#simple-search-tab"><i class="fa fa-search"></i> Search</a></li>
+                                <li><a data-toggle="tab" href="#advanced-search-tab"><i class="fa fa-search-plus"></i> Advanced Search </a></li>
+                              </ul>
+                              <div class="tab-content">
+                                <div id="simple-search-tab" class="tab-pane active">
+                                    <div class="panel-body">
+                                        <form class="form-inline" id="ticket_search" action="" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="" />
+                                            <div class="input-group search-group">
+                                              <input type="text" class="form-control" placeholder="Search">
+                                              <span class="input-group-btn">
+                                                <button class="btn btn-default" type="button">Go!</button>
+                                              </span>
+                                            </div>
+                                            <span class="filter-by">Filter by:</span>
+
+
+                                            <div class="dropdown">
+                                              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                Assignee
+                                                <span class="caret"></span>
+                                              </button>
+                                              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                                <li><a href="#">John Martin</a></li>
+                                                <li><a href="#">Chris Nichols</a></li>
+                                                <li><a href="#">George Brown</a></li>
+                                                <li><a href="#">John Doe</a></li>
+                                                <li><a href="#">Kevin Smith</a></li>
+                                                <li><a href="#">Admin User</a></li>
+                                              </ul>
+                                            </div>
+                                            <div class="dropdown">
+                                              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                Request Type
+                                                <span class="caret"></span>
+                                              </button>
+                                              <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                                <li><a href="#">Damage</a></li>
+                                                <li><a href="#">Design</a></li>
+                                                <li><a href="#">Emergency</a></li>
+                                                <li><a href="#">Insufficient</a></li>
+                                                <li><a href="#">Large Project</a></li>
+                                                <li><a href="#">Normal</a></li>
+                                              </ul>
+                                            </div>
+                                            <div class="dropdown">
+                                              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                Ticket Status
+                                                <span class="caret"></span>
+                                              </button>
+                                              <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                                                <li><a href="#">incoming</a></li>
+                                                <li><a href="#">assigned</a></li>
+                                                <li><a href="#">closed</a></li>
+                                              </ul>
+                                            </div>                                        
+                                        </form>                  
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="header-icon-bar">
+                                <div class="checkbox m-r-xs">
+                                    <input type="checkbox" id="checkbox1">
+                                    <label for="checkbox1">
+                                       
+                                    </label>
+                                    <span class="caret"></span>
+                                </div>
+                                <a href="#" class="btn btn-xs"><i class="fa fa-refresh"></i></a>
+                                <a href="#" class="btn btn-xs" data-toggle="modal" data-target="#ticket-edit-modal"><i class="fa fa-edit"></i></a>
+                                <a href="#" class="btn btn-xs" data-toggle="modal" data-target="#ticket-close-modal"><i class="fa fa-times"></i> + <i class="fa fa-comment"></i></a>
+                                <a href="#" class="btn btn-xs"><i class="fa fa-envelope-o"></i></a>
+                                <a href="#" class="btn btn-xs"><i class="fa fa-print"></i></a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="table-responsive">
+                          <table class="table table-hover">
+                            <thead>
+                              <tr>
+                                  <th>
+                                    <span class="caret"></span>
+                                  </th>
+                                  <th class="dropup">
+                                      <span class="caret"></span>
+                                      Request Type
+                                  </th>
+                                  <th>
+                                      <span class="caret"></span>
+                                      Request No
+                                  </th>
+                                  <th>
+                                      <span class="caret"></span>
+                                      Service Area
+                                  </th>
+                                  <th>
+                                      <span class="caret"></span>
+                                      Status
+                                  </th>
+                                  <th>
+                                      <span class="caret"></span>
+                                      Assignee
+                                  </th>
+                                  <th>
+                                      <span class="caret"></span>
+                                      Digsite Address
+                                  </th>
+                                  <th>
+                                      <span class="caret"></span>
+                                      Contractor
+                                  </th>
+                                  <th>
+                                      <span class="caret"></span>
+                                      Due Date
+                                  </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td>
+                                      <div class="checkbox m-r-xs">
+                                        <input type="checkbox" id="checkbox2">
+                                        <label for="checkbox2">
+                                           
+                                        </label>                      
+                                      </div>
+                                    </td>
+                                    <td><span class="label label-primary">Normal</span></td>
+                                    <td><a href="#">07222082-00001</a></td>
+                                    <td>SPL258</td>
+                                    <td>Assigned</td>
+                                    <td>John Doe</td>
+                                    <td>Broadway Ave, New York, NY</td>
+                                    <td>Company Contract</td>
+                                    <td>Sat, 02 Jul 2011 11:09:42 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                      <div class="checkbox m-r-xs">
+                                        <input type="checkbox" id="checkbox3">
+                                        <label for="checkbox3">
+                                           
+                                        </label>                      
+                                      </div>
+                                    </td>
+                                    <td><span class="label label-primary">Normal</span></td>
+                                    <td><a href="#">07222082-00001</a></td>
+                                    <td>SPL258</td>
+                                    <td>Incoming</span></td>
+                                    <td>John Doe</td>
+                                    <td>Broadway Ave, New York, NY</td>
+                                    <td>Company Contract</td>
+                                    <td>Sat, 02 Jul 2011 11:09:38 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                      <div class="checkbox m-r-xs">
+                                        <input type="checkbox" id="checkbox5">
+                                        <label for="checkbox5">
+                                           
+                                        </label>                      
+                                      </div>
+                                    </td>
+                                    <td><span class="label label-danger">Emergency</span></td>
+                                    <td><a href="#">07222082-00001</a></td>
+                                    <td>SPL258</td>
+                                    <td>Incoming</td>
+                                    <td>John Doe</td>
+                                    <td>Broadway Ave, New York, NY</td>
+                                    <td>Company Contract</td>
+                                    <td>Sat, 02 Jul 2011 11:09:38 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                      <div class="checkbox m-r-xs">
+                                        <input type="checkbox" id="checkbox6">
+                                        <label for="checkbox6">
+                                           
+                                        </label>                      
+                                      </div>
+                                    </td>
+                                    <td><span class="label label-success">Design</span></td>
+                                    <td><a href="#">07222082-00001</a></td>
+                                    <td>SPL258</td>
+                                    <td>Incoming</td>
+                                    <td>John Doe</td>
+                                    <td>Broadway Ave, New York, NY</td>
+                                    <td>Company Contract</td>
+                                    <td>Sat, 02 Jul 2011 11:09:38 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                      <div class="checkbox m-r-xs">
+                                        <input type="checkbox" id="checkbox7">
+                                        <label for="checkbox7">
+                                           
+                                        </label>                      
+                                      </div>
+                                    </td>
+                                    <td><span class="label label-warning">Damage</span></td>
+                                    <td><a href="#">07222082-00001</a></td>
+                                    <td>SPL258</td>
+                                    <td>Incoming</td>
+                                    <td>John Doe</td>
+                                    <td>Broadway Ave, New York, NY</td>
+                                    <td>Company Contract</td>
+                                    <td>Sat, 02 Jul 2011 11:09:38 PM</td>
+                                </tr>
+                                
+                            </tbody>
+                          </table>
+                        </div>
+
+                        <div class="btn-group next-previous"><a class="btn btn-white prev previous_page" href="#">Previous</i></a> <a rel="start" class="btn btn-white active" href="#">1</a> <a rel="next" class="btn btn-white" href="#">2</a> <a class="btn btn-white" href="#">3</a> <a class="btn btn-white" href="#">4</a> <a class="btn btn-white" href="#">5</a> <a class="btn btn-white" href="#">6</a> <a class="btn btn-white" href="#">7</a> <a class="btn btn-white" href="#">8</a> <a class="btn btn-white" href="#">9</a> <a class="btn btn-white" href="#">10</a> <a class="btn btn-white" href="#">11</a> <a class="btn btn-white next next_page " rel="next" href="#">Next</a></div>
+                      </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="pull-right">
+                Copyright &copy; 2016
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Mainly scripts -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+
+
+</body>
+
+</html>

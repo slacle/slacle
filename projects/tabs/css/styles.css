@@ -1,0 +1,81 @@
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+	background: #eee;
+}
+
+body {
+	font-family: arial, sans-serif;
+	color: #444;
+	max-width: 767px;
+	margin: 50px auto;
+	padding: 20px;
+}
+
+h1 {
+    margin-bottom: 0.5em;
+}
+
+p {
+	margin-bottom: 1em;
+	line-height: 1.4em;
+}
+
+input {
+	display: none;
+}
+
+label {
+	background: #ccc;
+    padding: 15px 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+label:hover {
+	color: #000;
+}	
+
+.tab {
+    display: inline-block;
+}
+
+.accordion {
+    display: none;
+}		
+
+input[id$="1"]:checked ~ label[for$="1"],
+input[id$="2"]:checked ~ label[for$="2"],
+input[id$="3"]:checked ~ label[for$="3"] {
+	background: #fff;
+	color: #ccc;
+}
+
+div {
+	display: none;
+    padding: 20px;
+	background: #fff;
+}
+
+input[id$="1"]:checked ~ label[for$="1"] + div,
+input[id$="2"]:checked ~ label[for$="2"] + div,
+input[id$="3"]:checked ~ label[for$="3"] + div  {
+	display: block;
+}
+
+@media (max-width: 767px) {
+	body {
+		margin-top: 0;
+	}
+	.tab {
+		display: none;
+	}
+	.accordion {
+		display: block;
+		border-bottom: 1px solid #eee;
+	}
+}

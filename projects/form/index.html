@@ -1,0 +1,190 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Form</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.css">
+
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+	<header>
+		<h1>Your account</h1>
+	</header>
+
+	<div class="container">
+		<div class="side-img"></div>
+		<div class="content">
+
+			<section id="tab-1">
+				<h2>Section 1</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis sapien sapien. Duis sapien nisi, congue id urna nec, ullamcorper interdum ipsum. Sed id purus velit.</p>
+				<p>Suspendisse tristique sit amet lacus non sagittis. Nunc suscipit, eros a fringilla auctor, nisl quam accumsan nulla, et blandit ante sapien vitae sapien. Vestibulum eget malesuada massa, quis lobortis elit.</p>
+				<p>Praesent sit amet dui volutpat, pulvinar quam porttitor, interdum nulla. Pellentesque varius turpis non imperdiet interdum.</p>
+			</section>
+
+			<section id="tab-2" class="active">
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel rhoncus nisi.</p>
+
+				<form>
+
+
+					<fieldset>
+						<legend>Your name</legend>
+						<input type="text" id="name" name="name" required>
+					</fieldset>
+
+
+					<fieldset>					
+						<legend>Mobile</legend>
+						<div class="mobile">
+							<select name="country-code" required>
+								<option value=""></option>
+								<option value="pl">+48 (PL)</option>
+								<option value="de">+49 (DE)</option>
+								<option value="es">+34 (ES)</option>
+							</select>
+							<input type="tel" name="number" required>
+						</div>
+					</fieldset>
+
+
+	  				<fieldset>
+					  	<legend>Gender</legend>
+
+						<label class="gender" for="female">
+						    <input type="radio" value="female" name="gender" id="female" required> 
+						    <span>
+								<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAXCAMAAAFPMX86AAAAilBMVEXCw8RiYmPg4eOqq6w0NDR8fH21tbfa291kZWVmZmdeXl5MTEw3NzeGh4fBwcPd3uDr7O6bnJ28vb7u7vDZ2duVlpfV1tfl5efU1ddcXF2amptRUVFAQUE4ODjKysyRkZJTU1RPUFA7Ozvq6+1DQ0NLS0vc3d92d3eYmZrj5OZvb3CpqqszMzPy8/XkhewnAAAALnRSTlP///////////////////////////////////////////////////////////8Ago9zVQAAANlJREFUKM99jkeOAzEMBKmJzjnnHLv+/709SJqxgYV5ahTIYhsJBkcDjBQT+PwAYdAo3hgAGOzBOHD2aGFkpTDwZ+H42pm+NIkEuPQxuOdQ7TBUc+6dpJIUMnTjL0j3ScgTvaadq886A4cHGP0LlXNxrLP/m9/B4K2ibGTBOW9qWPlDPQMkKf2Hf/WBZ55JUpY/qfFgrVYJULa0HlS4rR5hempHvNOSapbaBTw+6RbpTadxlMy2Wnm60nb20aTYSJK0KfgsCCDVOeCRc05yzo2+cGJmkpklPyV/ywNNX6tGONkAAAAASUVORK5CYII=" alt="female">
+						    </span>
+						</label>
+
+						<label class="gender" for="male">
+							<input type="radio" value="male" name="gender" id="male"> 
+							<span>
+								<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAXCAMAAAFPMX86AAAAk1BMVEVUVFRKSkvi4+VDRERCQkKUlJV/f4Crq63W19nc3d9vb3B2dnfu7vDT1Nbp6uxxcXJtbW67u73Y2dqvr7Hj5OY1NTXNztB9fn7x8fM6OjpQUFE6OzvExMY3NzfMzc5SUlLl5efFxseXl5iGh4fw8fM9Pj4+Pj5PT0+kpaaztLXg4eOpqqvv8PLl5uja290zMzPy8/XShIO6AAAAMXRSTlP///////////////////////////////////////////////////////////////8AH5pOIQAAAPBJREFUKM91kcdSBEEMQzVxc2JzzhFovf//Og4zs7AU+KRS2+rnsiCIHgLELshjixoCkAUA4s2AgBCKJ7UTCxmMDFtE0ix6gCyKbAH1+wkJC0+ARQaoewGgyLy5w8HwnOWHDiGEj1JHUepQ9cROg4DBhthxFETL/asdEwWtlsBnkTl/AFw3gAxAfwAon1YICE95LFvlv7nnK/7hKerossKLDRDrDzuWFUelPdzadpo1ZMVQ2LnPtRmwX3jcAMiOO9H0oYrYOz2VJCMn39E93yvAxJ3KnSWuP0+39nuhJ2cPf6xzW9uXxHbe/r1ld/TC/wV7/1ADsbguDwAAAABJRU5ErkJggg==" alt="male">
+							</span>
+						</label>
+					</fieldset>
+
+
+					<fieldset>
+						<legend>Date of Birth</legend>
+						<div class="date">
+			                <select name="day" class="select-date">
+			                	<option value=""></option>
+			                	<option value="1">01</option>
+			                    <option value="2">02</option>
+			                    <option value="3">03</option>
+			                    <option value="4">04</option>
+			                    <option value="5">05</option>
+			                    <option value="6">06</option>
+			                    <option value="7">07</option>
+			                    <option value="8">08</option>
+			                    <option value="9">09</option>
+			                    <option value="10">10</option>
+			                    <option value="11">11</option>
+			                    <option value="12">12</option>
+			                    <option value="13">13</option>
+			                    <option value="14">14</option>
+			                    <option value="15">15</option>
+			                    <option value="16">16</option>
+			                    <option value="17">17</option>
+			                    <option value="18">18</option>
+			                    <option value="19">19</option>
+			                    <option value="20">20</option>
+			                    <option value="21">21</option>
+			                    <option value="22">22</option>
+			                    <option value="23">23</option>
+			                    <option value="24">24</option>
+			                    <option value="25">25</option>
+			                    <option value="26">26</option>
+			                    <option value="27">27</option>
+			                    <option value="28">28</option>
+			                    <option value="29">29</option>
+			                    <option value="30">30</option>
+			                    <option value="31">31</option>
+			                </select>
+			                <span class="dash">&#8212;</span>
+			                <select name="month-name" class="select-date">
+			                	<option value=""></option>
+			                    <option value="1">January</option>
+			                    <option value="2">February</option>
+			                    <option value="3">March</option>
+			                    <option value="4">April</option>
+			                    <option value="5">May</option>
+			                    <option value="6">June</option>
+			                    <option value="7">July</option>
+			                    <option value="8">August</option>
+			                    <option value="9">September</option>
+			                    <option value="10">October</option>
+			                    <option value="11">November</option>
+			                    <option value="12">December</option>
+			                </select>
+			                <select name="month-number" class="select-date">
+			                	<option value=""></option>
+			                    <option value="1">01</option>
+			                    <option value="2">02</option>
+			                    <option value="3">03</option>
+			                    <option value="4">04</option>
+			                    <option value="5">05</option>
+			                    <option value="6">06</option>
+			                    <option value="7">07</option>
+			                    <option value="8">08</option>
+			                    <option value="9">09</option>
+			                    <option value="10">10</option>
+			                    <option value="11">11</option>
+			                    <option value="12">12</option>
+			                </select>
+			                <span class="dash">&#8212;</span>
+			                <input class="select-date" type="text" name="year" size="4" maxlength="4" required>
+		                </div>
+					</fieldset>
+					
+
+					<button>CONTINUE <span>&rarr;</span></button>
+
+
+				</form>
+
+			</section> <!-- tab-2 -->
+
+			<section id="tab-3">
+				<h2>Section 3</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis sapien sapien. Duis sapien nisi, congue id urna nec, ullamcorper interdum ipsum. Sed id purus velit. Suspendisse tristique sit amet lacus non sagittis. Nunc suscipit, eros a fringilla auctor, nisl quam accumsan nulla, et blandit ante sapien vitae sapien.</p>
+				<p>Vestibulum eget malesuada massa, quis lobortis elit. Praesent sit amet dui volutpat, pulvinar quam porttitor, interdum nulla. Pellentesque varius turpis non imperdiet interdum. </p>
+			</section>
+
+		</div> <!-- content -->
+
+		<nav>
+			<a href="tab-1">
+				01
+			</a>
+			<a href="tab-2" class="active">
+				02 <br>
+				Personal
+			</a>
+			<a href="tab-3">
+				03
+			</a>
+		</nav>
+
+	</div> <!-- container -->
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="js/scripts.js"></script>
+
+</body>
+</html>
