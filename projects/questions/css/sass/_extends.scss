@@ -1,0 +1,21 @@
+/* ----------- extends ----------- */
+
+%first-name {
+	font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
+    margin-right: 10px;	
+}
+
+%has-done {
+	font-size: 11px;
+	color: $text-light-grey;
+}
+
+%link-color {
+	color: $elements-blue;
+
+	&:hover {
+		color: ($elements-blue - 30);
+	}
+}

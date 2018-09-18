@@ -1,0 +1,31 @@
+// colors
+
+$white: #fff;
+
+$bg-beige: #ffe1ad;
+
+$bg-grey: #fbfbfb;
+$boxes-grey: #eeeeee;
+$line-grey: ($boxes-grey - 10);
+
+$text-light-grey: #a7a9ac;
+$text-medium-grey: #888888;
+$text-dark-grey: #2d2c2e;
+
+$bg-blue: #dff3fd;
+$elements-blue: #0266b3;
+
+$text-red: #e1173f;
+
+$badge-on: #fa8b81;
+$badge-off: #cfd1d3;
+
+
+// fonts
+
+$sans-serif: 'Roboto Condensed', sans-serif;
+$serif: 'Noto Serif', serif;
+
+// other
+
+$bg-pattern: repeating-linear-gradient(45deg, #fff, #fff 1px, $line-grey 3px, #fff 4px);

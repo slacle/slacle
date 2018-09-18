@@ -1,0 +1,207 @@
+/* ----------- question ----------- */
+
+.question {
+	background: $white;
+	max-width: 800px;
+	margin: 0 auto;
+	position: relative;
+
+	header {
+		padding: 20px;
+		background: $bg-blue;
+		height: 90px;
+		max-width: 600px;
+
+		img {
+		    float: left;
+		    margin-right: 38px;
+		    border-radius: 50%;
+		}
+
+		h1 {
+			font-family: $serif;
+		    font-size: 16px;
+    		margin-top: 4px;
+		}
+
+		p {
+			@extend %has-done;
+
+			a {
+			    @extend %first-name;
+			}
+		}
+
+		a {
+			@extend %link-color;
+		}
+
+	}
+
+	&:before {
+	    box-shadow: inset -5px 0 5px -5px rgba(0, 0, 0, 0.05);
+	    content: " ";
+	    height: 100%;
+	    position: absolute;
+	    top: 0;
+	    left: -5px;
+	    width: 5px;
+	}	
+
+	&:after {
+	    box-shadow: inset 10px 0 10px -10px rgba(0, 0, 0, 0.15);
+	    content: " ";
+	    height: 100%;
+	    position: absolute;
+	    top: 0;
+	    right: -10px;
+	    width: 10px;
+	}
+
+} // .question
+
+.load-more {
+	padding: 33px 20px;
+
+	a {
+		color: $text-red;
+	    font-weight: bold;
+    	font-size: 15px;
+
+    	&:hover {
+    		text-decoration: underline;
+    	}
+	}
+}
+
+
+/* ----------- extends for details ----------- */
+
+%serif-txt {
+	font-family: $serif;
+	font-size: 12px;
+}
+
+%numbers {
+	font-family: $sans-serif;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+%under-hr {
+	color: $text-light-grey;
+	font-size: 11px;
+	text-transform: uppercase;	
+}
+
+%bottom-circle {
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: -6px;
+    left: 40px;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background: $text-light-grey;
+}
+
+
+/* ----------- details ----------- */
+
+.details {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding-bottom: 40px;
+	border-bottom: 1px solid $boxes-grey;
+
+	img {
+		border-radius: 50%;
+	}
+
+	hr {
+	    height: 1px;
+	    margin-bottom: 9px;
+	    background: $text-light-grey;
+	    border: none;	
+	}
+
+	.panels {
+		display: flex;
+    	align-items: flex-end;
+
+    	a:last-child div {
+			margin-right: 0;
+		}
+	}
+
+	div div, .stats {
+		position: relative;
+		height: 154px;
+		width: 90px;
+		padding: 10px;
+		margin-right: 12px;
+		text-align: center;
+	}
+
+	.asked, .found {
+		height: 187px;
+		padding-top: 157px;
+		background: $bg-blue;
+		@extend %under-hr;
+	}
+
+	.found  {
+		&:after { @extend %bottom-circle; }
+	}
+
+	.more-act {
+		@extend %serif-txt;
+
+		&:after { @extend %bottom-circle; }
+
+		span {
+			display: block;
+			margin: 30px 0 52px;			
+			@extend %numbers;
+		}
+	}
+
+	.reacted {
+		background: $boxes-grey;
+		@extend %under-hr;
+
+		&:after { @extend %bottom-circle; }
+
+		&:hover{ background: ($boxes-grey + 5); }
+	    
+	    img {
+	    	margin: 12px 0 48px;
+	    }
+	}
+
+	.answered:after, .answered hr  {
+		background: $text-dark-grey;
+	}
+
+	.stats {
+	    display: flex;
+	    flex-direction: column;
+	    justify-content: space-between;
+	    width: 200px;
+	    margin: 0;
+	    padding: 5px 0 8px 52px;
+	    text-align: left;
+
+	    p {
+       		@extend %serif-txt;
+	    }
+
+	    span {
+	    	margin-right: 5px;			
+			@extend %numbers;
+	    }
+	}
+
+} // .details

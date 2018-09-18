@@ -1,0 +1,14 @@
+/* ----------- layout ----------- */
+
+body {
+	background: $bg-beige;
+	font-family: $sans-serif;
+	color: $text-dark-grey;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto 50px;
+	background: $bg-grey;
+	box-shadow: 5px 0px 5px 0px rgba(70, 70, 70, 0.1);
+}
