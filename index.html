@@ -137,18 +137,33 @@
             margin-bottom: 5px;
         }
 
-        .title, .date {
-            font-weight: bold;
+        #experience .title, #experience .date {
             margin-bottom: 0.85rem;
         }
 
-        .date {
+        .location, .date {
             font-style: italic;
+            text-align: right;
+        }
+
+        .institution, .title {
+            font-weight: bold;
         }
 
         .gpa {
             font-size: 0.9rem;
             color: #aaa;
+        }
+
+        @media (max-width: 500px) {
+            .flex {
+                flex-direction: column;
+                text-align-last: left;
+            }
+            
+            #experience .title {
+                margin-bottom: 0;
+            }
         }
     </style>
 </head>
@@ -281,12 +296,24 @@
         <hr>
 
         <div class="flex">
-            <span class="institution">Party with a Local</span>
-            <span class="location"> Amsterdam, Netherlands</span>
+            <span class="institution">CR38TE</span>
+            <span class="location">Oranjestad, Aruba</span>
         </div>
         <div class="flex">
             <span class="title">Front End Developer</span>
-            <span class="date">July 2015 - August 2015</span>
+            <span class="date">Jan 2018 - May 2018</span>
+        </div>
+        I coded the HMTL/CSS and created custom WordPress themes for several websites.
+
+        <hr>
+
+        <div class="flex">
+            <span class="institution">Party with a Local</span>
+            <span class="location">Amsterdam, Netherlands</span>
+        </div>
+        <div class="flex">
+            <span class="title">Front End Developer</span>
+            <span class="date">Jul 2015 - Aug 2015</span>
         </div>
         I worked on a project based on WordPress.
 
@@ -298,7 +325,7 @@
         </div>
         <div class="flex">
             <span class="title">Freelance Web Designer/Developer</span>
-            <span class="date">May 2011 - July 2013</span>
+            <span class="date">May 2011 - Jul 2013</span>
         </div>
         I worked on the design and coding of several projects together with other people.
 
@@ -310,11 +337,11 @@
         </div>
         <div class="flex">
             <span class="title">Freelance Web Designer/Developer (remotely)</span>
-            <span class="date">May 2010 - March 2012</span>
+            <span class="date">May 2010 - Mar 2012</span>
         </div>
         <div class="flex">
             <span class="title">Full time Web Designer/Developer (in office)</span>
-            <span class="date">November 2008 - April 2010</span>
+            <span class="date">Nov 2008 - Apr 2010</span>
         </div>
         I designed, coded, tested, and maintained many new and existing websites as part of a team.
 
@@ -330,7 +357,7 @@
         </div>
         <div class="flex">
             <span class="title">Bachelor of Arts in Digital Media</span>
-            <span class="date">August 2007</span>
+            <span class="date">Aug 2007</span>
         </div>
         <span class="gpa">GPA 3.55</span>
 
@@ -341,10 +368,12 @@
             <span class="location">Orlando, FL</span>
         </div>
         <div class="flex">
-            <span class="title">Associate in Applied Science in Electronics Engineering Technology</span>
+            <span class="title">Associate in Applied Science in <br> Electronics Engineering Technology</span>
             <span class="date">May 2005</span>
         </div>
         <span class="gpa">GPA 3.56</span>
+        <br>
+        <br>
         <div class="flex">
             <span class="title">Associate in Arts in General Studies</span>
             <span class="date">May 2004</span>
