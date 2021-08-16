@@ -1,1 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Web Design, Full Stack Development, HTML, CSS, JavaScript, Python, WordPress, Django, Photoshop"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="data:image/png;base64,iVBORw0KGgo="
+    />
 
+    <title>Web Development by Sebastian Laclé</title>
+
+    <style>
+      body {
+        margin: 0;
+        background: #000;
+        font-family: Verdana, Arial, sans-serif;
+        font-size: 0.95rem;
+      }
+
+      a {
+        color: #43541b;
+        font-weight: bold;
+      }
+
+      a:hover {
+        color: #9dc444;
+      }
+
+      ul a {
+        font-weight: normal;
+        color: #000;
+      }
+
+      p {
+        margin: 0 0 20px 0;
+        line-height: 1.8;
+      }
+
+      h1 {
+        font-family: georgia;
+        font-size: 1.4rem;
+        font-style: italic;
+        margin: 0 0 2rem;
+      }
+
+      h2 {
+        font-size: 1.15rem;
+        margin-top: 20px;
+      }
+
+      hr {
+        border-style: dashed;
+        color: #ddd;
+        margin: 1.5rem 0;
+      }
+
+      #latest hr {
+        margin: 25px 0;
+      }
+
+      li {
+        margin-bottom: 1rem;
+      }
+
+      header,
+      section {
+        margin: 0 auto;
+        max-width: 600px;
+        border-left: 5px solid;
+        border-right: 5px solid;
+      }
+
+      header {
+        padding: 45px 35px 20px;
+        display: flex;
+        justify-content: center;
+      }
+
+      header:after {
+        content: " ";
+        display: block;
+        height: 0;
+        clear: both;
+      }
+
+      section {
+        background: #fff;
+        padding: 35px;
+        margin-bottom: 35px;
+      }
+
+      #logo {
+        font-family: tahoma, helvetica, sans-serif;
+        font-weight: bold;
+        width: 120px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+      }
+
+      #logo .s {
+        color: #9dc444;
+        font-size: 25px;
+        font-style: italic;
+      }
+
+      #logo .lacle {
+        color: #fff;
+        font-size: 25px;
+      }
+
+      #logo .com {
+        color: #777777;
+        font-size: 11px;
+      }
+
+      #logo a {
+        text-decoration: none;
+      }
+
+      .contact a {
+        color: #777;
+        word-break: break-all;
+      }
+
+      .contact a:hover {
+        color: #9dc444;
+      }
+
+      .flex {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .institution,
+      .location {
+        font-style: italic;
+        color: #777;
+        margin-bottom: 5px;
+      }
+
+      #experience .title,
+      #experience .date {
+        margin-bottom: 0.85rem;
+      }
+
+      .location,
+      .date {
+        font-style: italic;
+        text-align: right;
+      }
+
+      .institution,
+      .title {
+        font-weight: bold;
+      }
+
+      .gpa {
+        font-size: 0.9rem;
+        color: #aaa;
+      }
+
+      @media (max-width: 500px) {
+        .flex {
+          flex-direction: column;
+          text-align-last: left;
+        }
+
+        #experience .title {
+          margin-bottom: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div id="logo">
+        <span class="s">s</span>
+        <span class="lacle">lacle</span>
+        <span class="com">.com</span>
+      </div>
+    </header>
+
+    <section id="about">
+      <h1>About</h1>
+      <p>Hi, I'm <b>Sebastian Lacl&eacute;</b> - <b>Web Developer</b>.</p>
+      <p>
+        I have been coding HTML and CSS since 2005 when I was doing my Bachelor
+        degree in Digital Media at University of Central Florida. And I have
+        been making websites with <a href="/wordpress/">WordPress</a> since 2009
+        when I was working at CaribMedia.
+      </p>
+      <p>Nowadays I'm more interested in working with Django and/or React.</p>
+      <p>You may contact me and find me at:</p>
+      <ul class="contact">
+        <li>
+          <strong>Email:</strong>
+          <a href="mailto:info@slacle.com">info@slacle.com</a>
+        </li>
+        <li>
+          <strong>LinkedIn:</strong>
+          <a href="https://www.linkedin.com/in/slacle/" target="_blank"
+            >https://www.linkedin.com/in/slacle/</a
+          >
+        </li>
+        <li>
+          <strong>GitHub:</strong>
+          <a href="https://github.com/slacle" target="_blank"
+            >https://github.com/slacle</a
+          >
+        </li>
+        <li>
+          <strong>UpWork:</strong>
+          <a
+            href="https://www.upwork.com/o/profiles/users/_~0154f1cbae5786e0a5/"
+            target="_blank"
+            >upwork.com/o/profiles/users/_~0154f1cbae5786e0a5/</a
+          >
+        </li>
+        <li>
+          <strong>Stack Overflow:</strong>
+          <a
+            href="https://stackoverflow.com/users/4386293/slacle"
+            target="_blank"
+            >https://stackoverflow.com/users/4386293/slacle</a
+          >
+        </li>
+        <li>
+          <strong>WordPress:</strong>
+          <a href="https://wordpress.org/support/users/slacle/" target="_blank"
+            >https://wordpress.org/support/users/slacle/</a
+          >
+        </li>
+        <li>
+          <strong>Twitter:</strong>
+          <a href="https://twitter.com/_slacle" target="_blank"
+            >https://twitter.com/_slacle</a
+          >
+        </li>
+      </ul>
+    </section>
+
+    <section id="latest">
+      <h1>Latest Work</h1>
+
+      <a href="https://github.com/slacle/devf-cinta-roja-front" target="_blank"
+        >Simple CRUD app</a
+      >
+      <ul>
+        <li>CRUD app made with MERN stack.</li>
+        <li>Styled with Bootstrap 4</li>
+      </ul>
+
+      <hr />
+
+      <a href="https://github.com/slacle/country-capitals-game" target="_blank"
+        >Country Capitals Game</a
+      >
+      <ul>
+        <li>Simple game made with React.</li>
+      </ul>
+
+      <hr />
+
+      <a
+        href="https://github.com/slacle/Product-Registration-Form"
+        target="_blank"
+        >Product Registration Form</a
+      >
+      <ul>
+        <li>Fictional form with specific validation requirements.</li>
+        <li>Custom vanilla JS validation.</li>
+        <li>
+          Constraint Validation API with native HTML5 validation fallback .
+        </li>
+      </ul>
+
+      <hr />
+
+      <a href="https://www.funstaclemasters.com/" target="_blank"
+        >Funstacle Masters</a
+      >
+      <ul>
+        <li>I turned the design from our designer into a working website.</li>
+        <li>I made a custom WordPress theme. That included writing PHP.</li>
+        <li>The WP admin was customized with Advanced Custom Fields Pro.</li>
+        <li>I used Bootstrap 4 and modified it with my own SCSS files.</li>
+      </ul>
+
+      <hr />
+
+      <a href="https://slacle.com/projects/form/">Form</a>
+      <ul>
+        <li>This was a test project for a job application.</li>
+        <li>I was given a PSD and I had to turn it into code.</li>
+        <li>I used css transitions/animations and jQuery.</li>
+      </ul>
+
+      <hr />
+
+      <a href="https://slacle.com/projects/questions/">Questions</a>
+      <ul>
+        <li>This was a test project for a job application.</li>
+        <li>
+          The link above is to a CSS only version, but you can see the source of
+          the Vue.js version at
+          <a href="https://github.com/slacle/questions" target="_blank"
+            >its repository</a
+          >.
+        </li>
+        <li>
+          The CSS version contains 3 views:
+          <a href="https://slacle.com/projects/questions/">index</a>,
+          <a href="https://slacle.com/projects/questions/single.html">single</a
+          >, and
+          <a href="https://slacle.com/projects/questions/profile.html"
+            >profile</a
+          >.
+        </li>
+        <li>
+          I was given a series of jpeg images for how the app needed to look on
+          different screen sizes, and I had to turn it into code.
+        </li>
+        <li>
+          I was given some tasks to complete, but in general I was free to use
+          any technology I wanted. I chose to use Vue.js. And there was no
+          description as to what the app itself was supposed to do.
+        </li>
+        <li>
+          I completed the required tasks, but there is obviously a lot more that
+          could have been done if I wanted, but I didn't have more time.
+        </li>
+        <li>
+          Some of the working functionality in the Vue.js version include:
+          <br /><br />
+          <ul>
+            <li>
+              3 different views. All questions, single question (page for each
+              question), and profile view (page for each user).
+            </li>
+            <li>Searching works.</li>
+            <li>
+              The radio inputs change the questions to a single one from one
+              user that I picked when on "My shelf".
+            </li>
+            <li>
+              The voting of the question itself allows to vote once up and once
+              down.
+            </li>
+            <li>
+              The questions and comments, the users, and some (not all) of the
+              data are loaded dynamically from a JSON file that I created
+              myself.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <hr />
+
+      <a href="https://slacle.com/projects/plp/">Product Listing Page</a>
+      <ul>
+        <li>This was a test project for a job application.</li>
+        <li>
+          The link above is to a static build hosted on GitHub, but you can see
+          the source and instructions for the test by
+          <a
+            href="https://drive.google.com/open?id=0ByttPtpep419WTl6UVkzY09zSnM"
+            >clicking here to download the zip file from my Google Drive</a
+          >.
+        </li>
+        <li>
+          In the zip file you will find the readme file which describes what I
+          had to do. In short, the src folder had some things to start with and
+          I had to build on it. Basically the folder structure is what was there
+          and some minimum HTML to get started. I had to do the rest of the HTML
+          using Handlebars.js and all the CSS using Less. The build folder is
+          the compiled output to be used for production.
+        </li>
+      </ul>
+
+      <hr />
+
+      <a href="https://slacle.com/projects/tabs-accordion/"
+        >Tabs to Accordion</a
+      >
+      <ul>
+        <li>This was a test project for a job application.</li>
+        <li>
+          The link above is to a static version, but you can see a dynamic
+          version by
+          <a
+            href="https://drive.google.com/open?id=0ByttPtpep419YTkyM3hKVFRvakk"
+            >clicking here to download the zip file from my Google Drive</a
+          >.
+        </li>
+        <li>
+          I had to do a tabs component that turns into accordion on smaller
+          screens.
+        </li>
+        <li>
+          The dynamic version uses AJAX to load the content on click, so it
+          needs to run on a server environment to work.
+        </li>
+        <li>
+          I had to not use absolute positioning for the content, no JS for the
+          tabs/accordion functionality, and it had to support IE9.
+        </li>
+        <li>
+          I purposely kept it as simple and with as little markup as possible.
+        </li>
+      </ul>
+
+      <hr />
+
+      <a href="projects/dashboard/tickets.html"
+        >Dashboard based on Inspinia theme</a
+      >
+      <ul>
+        <li>
+          I was given PSD files of a design and I had to write CSS to recreate
+          the design.
+        </li>
+        <li>
+          <a href="http://wrapbootstrap.com/preview/WB0R5L90S" target="_blank"
+            >Inspinia theme</a
+          >
+          was used as a starting template.
+        </li>
+        <li>
+          I had to use modern techniques such as Responsive Web Design and
+          required a lot of attention to detail to complete the tasks.
+        </li>
+        <li>
+          Here's an <a href="projects/dashboard/">empty page</a> to use as a
+          template to create the rest of the pages.
+        </li>
+      </ul>
+    </section>
+
+    <section id="experience">
+      <h1>Work Experience</h1>
+
+      <div class="flex">
+        <span class="institution">Freelance</span>
+        <span class="location">Worldwide</span>
+      </div>
+      <div class="flex">
+        <span class="title">Web Design / Front End Development</span>
+        <span class="date">May 2010 - Present</span>
+      </div>
+      I have worked on different kinds of projects doing mostly Design, HTML,
+      CSS, and WordPress.
+
+      <hr />
+
+      <div class="flex">
+        <span class="institution">CR38TE</span>
+        <span class="location">Oranjestad, Aruba</span>
+      </div>
+      <div class="flex">
+        <span class="title">Front End Developer</span>
+        <span class="date">Jan 2018 - May 2018</span>
+      </div>
+      I coded the HMTL/CSS and created custom WordPress themes for several
+      websites.
+
+      <hr />
+
+      <div class="flex">
+        <span class="institution">Party with a Local</span>
+        <span class="location">Amsterdam, Netherlands</span>
+      </div>
+      <div class="flex">
+        <span class="title">Front End Developer</span>
+        <span class="date">Jul 2015 - Aug 2015</span>
+      </div>
+      I worked on a project based on WordPress.
+
+      <hr />
+
+      <div class="flex">
+        <span class="institution">MySala coworking</span>
+        <span class="location">Granada, Spain</span>
+      </div>
+      <div class="flex">
+        <span class="title">Freelance Web Designer/Developer</span>
+        <span class="date">May 2011 - Jul 2013</span>
+      </div>
+      I worked on the design and coding of several projects together with other
+      people.
+
+      <hr />
+
+      <div class="flex">
+        <span class="institution">CaribMedia</span>
+        <span class="location">Oranjestad, Aruba</span>
+      </div>
+      <div class="flex">
+        <span class="title">Freelance Web Designer/Developer (remotely)</span>
+        <span class="date">May 2010 - Mar 2012</span>
+      </div>
+      <div class="flex">
+        <span class="title">Full time Web Designer/Developer (in office)</span>
+        <span class="date">Nov 2008 - Apr 2010</span>
+      </div>
+      I designed, coded, tested, and maintained many new and existing websites
+      as part of a team.
+    </section>
+
+    <section id="education">
+      <h1>Education</h1>
+
+      <div class="flex">
+        <span class="institution">University of Central Florida</span>
+        <span class="location">Orlando, FL</span>
+      </div>
+      <div class="flex">
+        <span class="title">Bachelor of Arts in Digital Media</span>
+        <span class="date">Aug 2007</span>
+      </div>
+      <span class="gpa">GPA 3.55</span>
+
+      <hr />
+
+      <div class="flex">
+        <span class="institution">Valencia Community College</span>
+        <span class="location">Orlando, FL</span>
+      </div>
+      <div class="flex">
+        <span class="title"
+          >Associate in Applied Science in <br />
+          Electronics Engineering Technology</span
+        >
+        <span class="date">May 2005</span>
+      </div>
+      <span class="gpa">GPA 3.56</span>
+      <br />
+      <br />
+      <div class="flex">
+        <span class="title">Associate in Arts in General Studies</span>
+        <span class="date">May 2004</span>
+      </div>
+      <span class="gpa">GPA 3.5</span>
+    </section>
+
+    <section id="skills">
+      <h1>Skills</h1>
+
+      <h2>Technical Skills</h2>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>React and MERN stack</li>
+        <li>Python and Django</li>
+        <li>WordPress set up, customization, and development</li>
+        <li>Experience with Sass, Bootstrap, jQuery</li>
+        <li>Exposure to PHP and MySQL</li>
+        <li>Git and GitHub</li>
+        <li>UX principles and general practices</li>
+        <li>
+          Designing, editing, and optimizing graphics for web (Adobe Photoshop)
+        </li>
+      </ul>
+
+      <h2>Soft Skills</h2>
+      <ul>
+        <li>Very organized.</li>
+        <li>Very detail oriented.</li>
+        <li>
+          Especially those two above, and also any other normal human ability
+          expected of a working professional.
+        </li>
+      </ul>
+    </section>
+
+    <section id="extra">
+      <h1>Extra</h1>
+
+      <h2>Languages</h2>
+      <ul>
+        <li><strong>English</strong> - advanced/excellent</li>
+        <li><strong>Spanish</strong> - first language</li>
+        <li><strong>Dutch</strong> - intermediate</li>
+        <li><strong>German</strong> - beginner</li>
+        <li><strong>Papiamento</strong> - native</li>
+      </ul>
+
+      <h2>College Honors</h2>
+      <ul>
+        <li>
+          <strong>Member of Phi Theta Kappa</strong> - Inducted in May 2005
+        </li>
+        <li>
+          <strong>President's List</strong> - Fall 2002, Spring 2004, Summer
+          2004, Fall 2004
+        </li>
+        <li>
+          <strong>Dean's List</strong> - Fall 2001, Fall 2005, Spring 2006
+        </li>
+      </ul>
+
+      <h2>Interests</h2>
+      <ul>
+        <li>
+          <strong>3D, VR/AR/MR/XR, Game Development, IoT, Interactivity</strong>
+          - I have played with Blender, Unity3D, Cycling'74 Max, and I have an
+          Arduino.
+        </li>
+        <li>
+          <strong>Music</strong> - I'm a guitarist and keyboardist. I use
+          Cubase, Reason, and several other software to create and record my own
+          music. After college I did a little bit of work at a small recording
+          studio near Orlando, FL.
+        </li>
+        <li>
+          <strong>Photography and Video</strong> - I have a DSLR camera with HD
+          video capabilities which I take out with me often.
+        </li>
+        <li>
+          <strong>Nature and Science</strong> - From animals and plants to stars
+          and storms, I'm fascinated by it all. I like being in nature and
+          learning about science.
+        </li>
+        <li>
+          <strong>Traveling</strong> - I like seeing and learning new things and
+          meeting new people. I have lived in 9 countries and visited over 10
+          others.
+        </li>
+        <li><strong>Sports</strong> - Adventure/extreme sports.</li>
+        <li><strong>Fun</strong> - Juggling.</li>
+      </ul>
+    </section>
+  </body>
+</html>
