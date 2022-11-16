@@ -33,15 +33,35 @@ body {
 }
 
 a {
-  color: #bbf7d0;
+  color: #86efac;
 }
 
 a:hover {
   color: #bbf7d0;
 }
 
-ul a {
-  color: #d4d4d4;
+.sevaztian {
+  color: #38bdf8;
+}
+
+.sevaztian:hover {
+  color: #7dd3fc;
+}
+
+.xevaz {
+  color: #f87171;
+}
+
+.xevaz:hover {
+  color: #fca5a5;
+}
+
+.w-a-v {
+  color: #facc15;
+}
+
+.w-a-v:hover {
+  color: #fde047;
 }
 
 p {
@@ -124,10 +144,6 @@ header {
   text-decoration: none;
 }
 
-section a {
-  color: #d4d4d4;
-}
-
 .contact a {
   color: #a3a3a3;
   word-break: break-all;
@@ -143,6 +159,7 @@ section a {
 }
 
 .work-link {
+  color: #d4d4d4;
   font-size: 1.3rem;
 }
 
