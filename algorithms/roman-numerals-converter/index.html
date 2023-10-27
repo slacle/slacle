@@ -5,5 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Roman Numerals Converter - Encoder / Decoder</title>
   </head>
-  <body></body>
+
+  <body>
+    Number
+    <input type="number" name="number" id="number" />
+    <button onclick="numToRom()">to Roman</button>
+    <br />
+    Roman
+    <input type="text" name="roman" id="roman" />
+    <button onclick="romToNum()">to Number</button>
+  </body>
+
+  <script>
+    function numToRom() {
+      let number = document.getElementById("number").value;
+
+      let symbols = {
+        1: "I",
+        5: "V",
+        10: "X",
+        50: "L",
+        100: "C",
+        500: "D",
+        1000: "M",
+      };
+
+      let choices = [1000, 500, 100, 50, 10, 5, 1];
+
+      let numArray = [];
+
+      while (number > 0) {
+        if (number.toString().charAt(0) == 9) {
+          let tens = number.toString().length - 1;
+          numArray.push(10 ** tens, 10 * 10 ** tens);
+          number -= 9 * 10 ** tens;
+          continue;
+        }
+
+        if (number.toString().charAt(0) == 4) {
+          let tens = number.toString().length - 1;
+          numArray.push(10 ** tens, 5 * 10 ** tens);
+          number -= 4 * 10 ** tens;
+          continue;
+        }
+
+        for (let choice of choices) {
+          if (Math.trunc(number / choice)) {
+            numArray.push(choice);
+            number -= choice;
+            break;
+          }
+        }
+      }
+
+      let result = numArray.map((num) => symbols[num]).join("");
+
+      document.getElementById("roman").value = result;
+    }
+
+    function romToNum() {
+      let roman = document.getElementById("roman").value;
+
+      let symbols = {
+        I: 1,
+        V: 5,
+        X: 10,
+        L: 50,
+        C: 100,
+        D: 500,
+        M: 1000,
+      };
+
+      let nums = roman.split("").map((letter) => symbols[letter]);
+
+      let result = 0;
+
+      while (nums.length) {
+        if (nums[0] < nums[1]) {
+          result += nums[1] - nums[0];
+          nums.splice(0, 2);
+          continue;
+        }
+        result += nums.shift();
+      }
+
+      document.getElementById("number").value = result;
+    }
+  </script>
 </html>
