@@ -81,6 +81,10 @@ h2 {
   margin-top: 50px;
 }
 
+h3 {
+  font-weight: bold;
+}
+
 .wordpress h2 {
   margin-bottom: 40px;
 }
